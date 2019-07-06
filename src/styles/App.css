@@ -31,3 +31,14 @@
     transform: rotate(360deg);
   }
 }
+
+.main-container {
+  height: 100vh;
+}
+
+.scroll-container {
+  /* display: flex;
+  flex-direction: column;
+  flex: 1; */
+  overflow: scroll;
+}
