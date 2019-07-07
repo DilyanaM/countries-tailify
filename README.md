@@ -19,3 +19,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 The build is minified and the filenames include the hashes.
+
+## Other scripts
+
+More available scripts can be found in the `package.json` file in `root` directory.
+
+## Resources
+
+### API:
+[https://countries.trevorblades.com/](https://countries.trevorblades.com/)
+
+### Tools:
+- React App: [https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app)
+- Reactstrap: [https://reactstrap.github.io/](https://reactstrap.github.io/)
+- Apollo Client: [https://www.apollographql.com/docs/react/](https://www.apollographql.com/docs/react/)
+- React Router: [https://github.com/ReactTraining/react-router](https://github.com/ReactTraining/react-router)

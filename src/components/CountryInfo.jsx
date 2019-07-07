@@ -36,7 +36,7 @@ const CountryInfo = (props) => {
                     {language.name}
                   </Badge>
                 ))
-                : 'N/A'
+                : <Badge color="light" className="ml-1 mr-1">N/A</Badge>
               }
             </h4>
           </Col>
