@@ -5,8 +5,8 @@ import { Button } from 'reactstrap';
 const Main = () => (
   <div>
     {/* eslint-disable-next-line react/no-unescaped-entities */}
-    <h1 className="display-3">Tailify traveler's guide</h1>
-    <p className="lead">Find your place for travel</p>
+    <h1 className="display-3">Tailify's travel guide</h1>
+    <p className="lead">Find your travel destination</p>
     <Link to="/continents">
       <Button color="success" size="lg">Explore</Button>
     </Link>

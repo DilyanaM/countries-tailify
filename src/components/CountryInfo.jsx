@@ -1,41 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Badge } from 'reactstrap';
+import {
+  Container, Row, Col, Jumbotron, Badge,
+} from 'reactstrap';
 
 const CountryInfo = (props) => {
   const {
     name, native, phone, currency, languages, emoji,
   } = props.country;
   return (
-    <div>
-      <span>{emoji}</span>
-      <h1>{name}</h1>
-      <h4>
-        <span>Native name: </span>
-        {native}
-      </h4>
-      <h4>
-        <span>Phone: </span>
-        <Badge color="secondary">{phone || 'N/A'}</Badge>
-      </h4>
-      <h4>
-        <span>Currency: </span>
-        {currency || 'N/A'}
-      </h4>
-      <div>
-        <h4>
-          <span>Languages: </span>
-          {languages.length
-            ? languages.map(language => (
-              <Badge key={language.code} className="mr-1">
-                {language.name}
-              </Badge>
-            ))
-            : 'N/A'
-          }
-        </h4>
-      </div>
-    </div>
+    <Container className="country-container mt-5">
+      <Jumbotron className="country-heading align-items-center">
+        <h1 className="display-1">{emoji}</h1>
+        <div className="country-name">
+          <h1>{name}</h1>
+          <h4>{native}</h4>
+        </div>
+      </Jumbotron>
+      <Container fluid className="country-details bg-dark">
+        <Row>
+          <Col xs="12" md="4">
+            <h4 className="country-detail">Phone:</h4>
+            <h4><Badge color="light">{phone || 'N/A'}</Badge></h4>
+          </Col>
+          <Col xs="12" md="4">
+            <h4 className="country-detail">Currency:</h4>
+            <h4><Badge color="light">{currency || 'N/A'}</Badge></h4>
+          </Col>
+          <Col xs="12" md="4">
+            <h4 className="country-detail">Languages:</h4>
+            <h4>
+              {languages.length
+                ? languages.map(language => (
+                  <Badge key={language.code} color="light" className="ml-1 mr-1">
+                    {language.name}
+                  </Badge>
+                ))
+                : 'N/A'
+              }
+            </h4>
+          </Col>
+        </Row>
+      </Container>
+    </Container>
   );
 };
 

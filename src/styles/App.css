@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none !important;
+}
+
 .App {
   text-align: center;
 }
@@ -6,6 +18,7 @@
   height: 100vh;
 }
 
+/* Countries list container */
 .scroll-container {
   overflow-y: scroll;
 }
@@ -32,22 +45,43 @@
   margin-bottom: 0;
 }
 
+/* Navigation */
 nav a {
   color: #fff !important;
   transition: color .3s ease-in;
+  border: 1px solid transparent;
+  padding: 10px;
+  transition: all .3s ease-in;
 }
 
 nav a:hover {
-  color: #28a745 !important;
+  border: 1px solid #fff;
+  border-radius: .25rem;
 }
 
-a,
-a:hover,
-a:focus {
-  text-decoration: none !important;
-}
-
+/* Search input */
 .filter:focus {
   border-color: #343a40 !important;
   box-shadow: 0 0 0 0.2rem rgba(52,58,64,.25) !important;
+}
+
+
+/* Country info */
+.country-container {
+  align-self: flex-start !important;
+}
+
+.country-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-details {
+  border: 1px solid #343a40;
+  border-radius: .25rem;
+  padding: 3rem;
+}
+
+.country-detail {
+  color: #fff;
 }

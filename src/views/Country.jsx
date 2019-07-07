@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
-import { Container } from 'reactstrap';
 import CountryInfo from '../components/CountryInfo';
 import Loader from '../components/common/Loader';
 import Error from '../components/common/Error';
@@ -33,9 +32,7 @@ const Country = (props) => {
         if (error) return <Error />;
 
         return (
-          <Container>
-            <CountryInfo country={data.country} />
-          </Container>
+          <CountryInfo country={data.country} />
         );
       }}
     </Query>

@@ -1,6 +1,9 @@
-# Tailify traveler's guide
+# Tailify's travel guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Application content:
+- list of continents on Earth
+- list of countries in given continent
+- detailed information about given country (such as *phone code*, *spoken languages*, *currency*, etc.)
 
 ## Run the project
 

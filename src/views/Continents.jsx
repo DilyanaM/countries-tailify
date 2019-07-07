@@ -1,7 +1,7 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
-import { Col } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import Continent from '../components/Continent';
 import Loader from '../components/common/Loader';
 import Error from '../components/common/Error';
@@ -22,15 +22,16 @@ const Continents = () => (
       if (error) return <Error />;
 
       return (
-        <div className="container-fluid">
-          <div className="row justify-content-center">
+        <Container fluid className="align-self-start">
+          <h1 className="mb-5 mt-5">Continents</h1>
+          <Row className="justify-content-center">
             {data.continents.map(continent => (
               <Col xs="6" sm="6" md="4" key={continent.code}>
                 <Continent continent={continent} />
               </Col>
             ))}
-          </div>
-        </div>
+          </Row>
+        </Container>
       );
     }}
   </Query>

@@ -48,7 +48,7 @@ export default class Continent extends React.Component {
 
           return (
             <Container fluid className="align-self-start">
-              <h1 className="continent-name mb-5 mt-5">{data.continent.name}</h1>
+              <h1 className="mb-5 mt-5">{data.continent.name}</h1>
               <Input
                 placeholder="Search..."
                 value={filterText}
