@@ -3,6 +3,8 @@ import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { Col } from 'reactstrap';
 import Continent from '../components/Continent';
+import Loader from '../components/common/Loader';
+import Error from '../components/common/Error';
 
 const Continents = () => (
   <Query
@@ -16,14 +18,14 @@ const Continents = () => (
     `}
   >
     {({ loading, error, data }) => {
-      if (loading) return <p>Loading...</p>;
-      if (error) return <p>Error :(</p>;
+      if (loading) return <Loader />;
+      if (error) return <Error />;
 
       return (
         <div className="container-fluid">
           <div className="row justify-content-center">
             {data.continents.map(continent => (
-              <Col xs="6" sm="4" md="3" key={continent.code}>
+              <Col xs="6" sm="6" md="4" key={continent.code}>
                 <Continent continent={continent} />
               </Col>
             ))}

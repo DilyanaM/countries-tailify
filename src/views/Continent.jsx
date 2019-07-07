@@ -4,6 +4,8 @@ import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { Container, Input } from 'reactstrap';
 import CountriesList from '../components/CountriesList';
+import Loader from '../components/common/Loader';
+import Error from '../components/common/Error';
 
 export default class Continent extends React.Component {
   state = {
@@ -28,21 +30,15 @@ export default class Continent extends React.Component {
               countries {
                 code,
                 name,
-                native,
-                phone,
-                currency,
-                languages {
-                  name,
-                  native
-                }
+                emoji
               }
             }
           }
         `}
       >
         {({ loading, error, data }) => {
-          if (loading) return <p>Loading...</p>;
-          if (error) return <p>Error :(</p>;
+          if (loading) return <Loader />;
+          if (error) return <Error />;
 
           const countriesList = filterText
             ? data.continent.countries
@@ -51,13 +47,13 @@ export default class Continent extends React.Component {
             : data.continent.countries;
 
           return (
-            <Container>
-              <h1 className="continent-name">{data.continent.name}</h1>
+            <Container fluid className="align-self-start">
+              <h1 className="continent-name mb-5 mt-5">{data.continent.name}</h1>
               <Input
-                placeholder="Country"
+                placeholder="Search..."
                 value={filterText}
                 onChange={this.setFilterText}
-                className="filter"
+                className="filter mb-5"
               />
               <CountriesList countriesList={countriesList} />
             </Container>

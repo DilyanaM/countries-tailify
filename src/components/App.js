@@ -5,6 +5,7 @@ import Header from './layout/Header';
 import Main from '../views/Main';
 import Continents from '../views/Continents';
 import Continent from '../views/Continent';
+import Country from '../views/Country';
 
 const App = () => (
   <div className="App">
@@ -15,6 +16,7 @@ const App = () => (
           <Route exact path="/" component={Main} />
           <Route exact path="/continents" component={Continents} />
           <Route exact path="/continents/:code" component={Continent} />
+          <Route exact path="/countries/:code" component={Country} />
         </Switch>
       </div>
     </div>

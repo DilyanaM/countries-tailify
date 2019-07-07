@@ -2,43 +2,52 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .main-container {
   height: 100vh;
 }
 
 .scroll-container {
-  /* display: flex;
-  flex-direction: column;
-  flex: 1; */
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+.list-group-item {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .3s ease-in;
+}
+
+.list-group-item:hover {
+  border-color: #343a40 !important;
+  background-color: rgba(52,58,64,.2) !important;
+}
+
+.list-group-item .country-name {
+  color: #343a40 !important;
+  margin-bottom: 0;
+}
+
+.list-group-item .country-flag {
+  margin-bottom: 0;
+}
+
+nav a {
+  color: #fff !important;
+  transition: color .3s ease-in;
+}
+
+nav a:hover {
+  color: #28a745 !important;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none !important;
+}
+
+.filter:focus {
+  border-color: #343a40 !important;
+  box-shadow: 0 0 0 0.2rem rgba(52,58,64,.25) !important;
 }

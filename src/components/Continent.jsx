@@ -10,9 +10,11 @@ const Continent = (props) => {
   return (
     <Card className="mt-3 mb-3">
       <CardBody>
-        <CardTitle>{name}</CardTitle>
+        <CardTitle>
+          <h3>{name}</h3>
+        </CardTitle>
         <Link to={`/continents/${code}`}>
-          <Button outline color="primary">Discover</Button>
+          <Button color="success">Discover</Button>
         </Link>
       </CardBody>
     </Card>

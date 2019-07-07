@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
@@ -9,15 +10,14 @@ export default class CountriesList extends React.Component {
   };
 
   componentDidMount() {
-    const header = document.getElementsByClassName('header')[0].offsetHeight;
-    const continentTitle = document
-      .getElementsByClassName('continent-name')[0].offsetHeight;
-    const filterInput = document.getElementsByClassName('filter')[0].offsetHeight;
+    const headerHeight = 56;
+    const continentTitleHeight = 144;
+    const filterInput = 86;
     const vh = document.getElementById('root').offsetHeight;
 
     this.setState({
-      viewportHeight: vh,
-      elementsHeight: header + continentTitle + filterInput,
+      viewportHeight: vh - 100,
+      elementsHeight: headerHeight + continentTitleHeight + filterInput,
     });
   }
 
@@ -32,7 +32,12 @@ export default class CountriesList extends React.Component {
       >
         <ListGroup>
           {countriesList.map(country => (
-            <ListGroupItem key={country.code}>{country.name}</ListGroupItem>
+            <Link to={`/countries/${country.code}`} key={country.code}>
+              <ListGroupItem className="bg-light">
+                <h5 className="country-name">{country.name}</h5>
+                <h1 className="country-flag">{country.emoji}</h1>
+              </ListGroupItem>
+            </Link>
           ))}
         </ListGroup>
       </div>
