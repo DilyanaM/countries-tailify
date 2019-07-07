@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { ListGroup, ListGroupItem } from 'reactstrap';
+import windowsDevice from '../utils/deviceCheck';
 
 export default class CountriesList extends React.Component {
   state = {
@@ -35,7 +36,9 @@ export default class CountriesList extends React.Component {
             <Link to={`/countries/${country.code}`} key={country.code}>
               <ListGroupItem className="bg-light country-list-item">
                 <h5 className="country-name">{country.name}</h5>
-                <h1 className="country-flag">{country.emoji}</h1>
+                {!windowsDevice && <h1 className="country-flag">{country.emoji}</h1>}
+                {/* Emoji is not rendered properly on Windows */}
+                {windowsDevice && <h1 className="country-flag">&#x2690;</h1>}
               </ListGroupItem>
             </Link>
           ))}

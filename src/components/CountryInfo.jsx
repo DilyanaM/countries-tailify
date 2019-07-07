@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import {
   Container, Row, Col, Jumbotron, Badge,
 } from 'reactstrap';
+import windowsDevice from '../utils/deviceCheck';
 
 const CountryInfo = (props) => {
   const {
     name, native, phone, currency, languages, emoji,
   } = props.country;
-  const windowsDevice = window.navigator.platform.toLowerCase().includes('win');
   return (
     <Container className="country-container mt-5">
       <Jumbotron className="country-heading align-items-center">
