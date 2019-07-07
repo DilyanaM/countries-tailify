@@ -33,7 +33,7 @@ export default class CountriesList extends React.Component {
         <ListGroup>
           {countriesList.map(country => (
             <Link to={`/countries/${country.code}`} key={country.code}>
-              <ListGroupItem className="bg-light">
+              <ListGroupItem className="bg-light country-list-item">
                 <h5 className="country-name">{country.name}</h5>
                 <h1 className="country-flag">{country.emoji}</h1>
               </ListGroupItem>
@@ -50,6 +50,7 @@ CountriesList.propTypes = {
     PropTypes.shape({
       code: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
+      emoji: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };

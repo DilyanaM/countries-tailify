@@ -26,7 +26,6 @@ Continent.propTypes = {
     name: PropTypes.string.isRequired,
     code: PropTypes.string.isRequired,
   }).isRequired,
-
 };
 
 export default Continent;

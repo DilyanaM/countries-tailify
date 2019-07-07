@@ -23,7 +23,7 @@ a:focus {
   overflow-y: scroll;
 }
 
-.list-group-item {
+.country-list-item {
   display: flex !important;
   flex-direction: row;
   justify-content: space-between;
@@ -31,17 +31,17 @@ a:focus {
   transition: all .3s ease-in;
 }
 
-.list-group-item:hover {
+.country-list-item:hover {
   border-color: #343a40 !important;
   background-color: rgba(52,58,64,.2) !important;
 }
 
-.list-group-item .country-name {
+.country-list-item .country-name {
   color: #343a40 !important;
   margin-bottom: 0;
 }
 
-.list-group-item .country-flag {
+.country-list-item .country-flag {
   margin-bottom: 0;
 }
 
@@ -64,7 +64,6 @@ nav a:hover {
   border-color: #343a40 !important;
   box-shadow: 0 0 0 0.2rem rgba(52,58,64,.25) !important;
 }
-
 
 /* Country info */
 .country-container {
