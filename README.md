@@ -5,6 +5,18 @@
 - list of countries in given continent
 - detailed information about given country (such as *phone code*, *spoken languages*, *currency*, etc.)
 
+## Clone project
+
+```
+git clone https://github.com/DilyanaM/countries-tailify.git && cd countries-tailify
+```
+
+## Install dependencies
+
+### `yarn`
+
+Dependencies for this project were installed via `yarn` package manager. All future dependencies must be installed with `yarn`.
+
 ## Run the project
 
 ### `npm start` or `yarn start`
