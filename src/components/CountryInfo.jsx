@@ -8,10 +8,13 @@ const CountryInfo = (props) => {
   const {
     name, native, phone, currency, languages, emoji,
   } = props.country;
+  const windowsDevice = window.navigator.platform.toLowerCase().includes('win');
   return (
     <Container className="country-container mt-5">
       <Jumbotron className="country-heading align-items-center">
-        <h1 className="display-1">{emoji}</h1>
+        {!windowsDevice && <h1 className="display-1">{emoji}</h1>}
+        {/* Emoji is not rendered properly on Windows */}
+        {windowsDevice && <h1 className="display-1">&#x2690;</h1>}
         <div className="country-name">
           <h1>{name}</h1>
           <h4>{native}</h4>
