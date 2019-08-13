@@ -42,6 +42,7 @@ a:focus {
 }
 
 .country-list-item .country-flag {
+  color: #212529 !important;
   margin-bottom: 0;
 }
 
