@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@shopify/enzyme-utilities": "^2.1.0",
     "apollo-boost": "^0.4.3",
     "apollo-cache-inmemory": "^1.6.2",
     "apollo-client": "^2.6.3",
     "apollo-link-http": "^1.5.15",
     "bootstrap": "^4.3.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
+    "jest-enzyme": "^7.0.2",
+    "jest-prop-type-error": "^1.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
@@ -16,7 +22,8 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "reactstrap": "^8.0.0"
+    "reactstrap": "^8.0.0",
+    "waait": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

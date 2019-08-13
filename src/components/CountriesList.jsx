@@ -14,7 +14,9 @@ export default class CountriesList extends React.Component {
     const headerHeight = 56;
     const continentTitleHeight = 144;
     const filterInput = 86;
-    const vh = document.getElementById('root').offsetHeight;
+    const vh = document.getElementById('root')
+      ? document.getElementById('root').offsetHeight
+      : 1000;
 
     this.setState({
       viewportHeight: vh - 100,

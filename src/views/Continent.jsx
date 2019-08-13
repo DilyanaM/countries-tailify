@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
-import { gql } from 'apollo-boost';
 import { Container, Input } from 'reactstrap';
 import CountriesList from '../components/CountriesList';
 import Loader from '../components/common/Loader';
 import Error from '../components/common/Error';
+import GET_CONTINENT from '../queries/continent';
 
 export default class Continent extends React.Component {
   state = {
@@ -22,20 +22,7 @@ export default class Continent extends React.Component {
     const { code } = this.props.match.params;
     const { filterText } = this.state;
     return (
-      <Query
-        query={gql`
-          {
-            continent(code: "${code}") {
-              name,
-              countries {
-                code,
-                name,
-                emoji
-              }
-            }
-          }
-        `}
-      >
+      <Query query={GET_CONTINENT} variables={{ code }}>
         {({ loading, error, data }) => {
           if (loading) return <Loader />;
           if (error) return <Error />;
