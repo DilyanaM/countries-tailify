@@ -2,7 +2,7 @@ import React from 'react';
 import { Alert } from 'reactstrap';
 
 const Error = () => (
-  <Alert color="success">
+  <Alert color="danger">
     Something went wrong!
   </Alert>
 );
