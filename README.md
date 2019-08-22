@@ -13,20 +13,34 @@ git clone https://github.com/DilyanaM/countries-tailify.git && cd countries-tail
 
 ## Install dependencies
 
-### `yarn`
+```
+yarn
+```
 
 Dependencies for this project were installed via `yarn` package manager. All future dependencies must be installed with `yarn`.
 
 ## Run the project
 
-### `npm start` or `yarn start`
+```
+npm start
+```
+### or
+```
+yarn start
+```
 
 Runs the app in development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Opens the app at [http://localhost:3000](http://localhost:3000) in the browser.
 
 ## Build the project
 
-### `npm run build` or `yarn build`
+```
+npm run build
+```
+### or
+```
+yarn build
+```
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -39,7 +53,7 @@ More available scripts can be found in the `package.json` file in `root` directo
 ## Resources
 
 ### API:
-[https://countries.trevorblades.com/](https://countries.trevorblades.com/)
+- [https://countries.trevorblades.com/](https://countries.trevorblades.com/)
 
 ### Tools:
 - ReactJS: [https://reactjs.org/](https://reactjs.org/)
