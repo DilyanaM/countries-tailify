@@ -10,7 +10,7 @@ describe('Continent View', () => {
   let wrapper;
 
   beforeEach(async () => {
-    const MOCKED_CONTINENT = {
+    const MOCKED_CONTINENTS = {
       data: {
         continent: {
           code: 'AF',
@@ -51,10 +51,10 @@ describe('Continent View', () => {
         request: {
           query: GET_CONTINENT,
           variables: {
-            code: MOCKED_CONTINENT.data.continent.code,
+            code: MOCKED_CONTINENTS.data.continent.code,
           },
         },
-        result: MOCKED_CONTINENT,
+        result: MOCKED_CONTINENTS,
       },
     ];
 
