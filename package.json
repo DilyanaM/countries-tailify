@@ -9,7 +9,7 @@
     "apollo-client": "^2.6.8",
     "apollo-link-http": "^1.5.15",
     "bootstrap": "^4.3.1",
-    "enzyme": "^3.10.0",
+    "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
