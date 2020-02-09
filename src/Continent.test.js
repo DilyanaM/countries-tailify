@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { MockedProvider } from 'react-apollo/test-utils';
+import { MockedProvider } from '@apollo/react-testing';
 import { trigger } from '@shopify/enzyme-utilities';
 import { mountAndUpdate } from './utils/mountAndUpdate';
 import Continent from './views/Continent';
