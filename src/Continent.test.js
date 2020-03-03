@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { MockedProvider } from '@apollo/react-testing';
+import { act } from 'react-dom/test-utils';
 import { trigger } from '@shopify/enzyme-utilities';
 import { mountAndUpdate } from './utils/mountAndUpdate';
 import Continent from './views/Continent';
@@ -46,25 +47,27 @@ describe('Continent View', () => {
       },
     };
 
-    const mocks = [
-      {
-        request: {
-          query: GET_CONTINENT,
-          variables: {
-            code: MOCKED_CONTINENTS.data.continent.code,
+    await act(async () => {
+      const mocks = [
+        {
+          request: {
+            query: GET_CONTINENT,
+            variables: {
+              code: MOCKED_CONTINENTS.data.continent.code,
+            },
           },
+          result: MOCKED_CONTINENTS,
         },
-        result: MOCKED_CONTINENTS,
-      },
-    ];
+      ];
 
-    wrapper = await mountAndUpdate(
-      <MockedProvider addTypename={false} mocks={mocks}>
-        <Router>
-          <Continent match={{ params: { code: 'AF' } }} />
-        </Router>
-      </MockedProvider>,
-    );
+      wrapper = await mountAndUpdate(
+        <MockedProvider addTypename={false} mocks={mocks}>
+          <Router>
+            <Continent match={{ params: { code: 'AF' } }} />
+          </Router>
+        </MockedProvider>,
+      );
+    });
   });
 
   it('should render full list of countries', () => {
