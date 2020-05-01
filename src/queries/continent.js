@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 const GET_CONTINENT = gql`
-  query getContinent($code: String) {
+  query getContinent($code: ID!) {
     continent(code: $code) {
       name,
       countries {
