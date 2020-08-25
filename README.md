@@ -64,8 +64,8 @@ More available scripts can be found in the `package.json` file in `root` directo
 - [https://countries.trevorblades.com/](https://countries.trevorblades.com/)
 
 ### Tools:
-- ReactJS: [https://reactjs.org/](https://reactjs.org/)
-- Create React App: [https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app)
-- Reactstrap: [https://reactstrap.github.io/](https://reactstrap.github.io/)
-- Apollo Client: [https://www.apollographql.com/docs/react/](https://www.apollographql.com/docs/react/)
-- React Router: [https://github.com/ReactTraining/react-router](https://github.com/ReactTraining/react-router)
+- [ReactJS](https://reactjs.org/)
+- [Create React App](https://github.com/facebook/create-react-app)
+- [Reactstrap](https://reactstrap.github.io/)
+- [Apollo Client](https://www.apollographql.com/docs/react/)
+- [React Router](https://github.com/ReactTraining/react-router)
