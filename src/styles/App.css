@@ -23,6 +23,11 @@ a:focus {
   overflow-y: scroll;
 }
 
+.no-match-container {
+  display: flex;
+  justify-content: center;
+}
+
 .country-list-item {
   display: flex !important;
   flex-direction: row;

@@ -33,18 +33,23 @@ export default class CountriesList extends React.Component {
         className="scroll-container"
         style={{ height: viewportHeight - elementsHeight }}
       >
-        <ListGroup>
-          {countriesList.map(country => (
-            <Link to={`/countries/${country.code}`} key={country.code}>
-              <ListGroupItem className="bg-light country-list-item">
-                <h5 className="country-name">{country.name}</h5>
-                {!windowsDevice && <h1 className="country-flag">{country.emoji}</h1>}
-                {/* Emoji is not rendered properly on Windows */}
-                {windowsDevice && <h1 className="country-flag">&#x2690;</h1>}
-              </ListGroupItem>
-            </Link>
-          ))}
-        </ListGroup>
+        {(!!countriesList && !!countriesList.length) &&
+          <ListGroup>
+            {countriesList.map(country => (
+              <Link to={`/countries/${country.code}`} key={country.code}>
+                <ListGroupItem className="bg-light country-list-item">
+                  <h5 className="country-name">{country.name}</h5>
+                  {!windowsDevice && <h1 className="country-flag">{country.emoji}</h1>}
+                  {/* Emoji is not rendered properly on Windows */}
+                  {windowsDevice && <h1 className="country-flag">&#x2690;</h1>}
+                </ListGroupItem>
+              </Link>
+            ))}
+          </ListGroup>}
+        {(!countriesList || !countriesList.length) &&
+          <div className="no-match-container">
+            <h5>No match</h5>
+          </div>}
       </div>
     );
   }
