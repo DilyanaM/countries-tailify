@@ -54,7 +54,7 @@ CountryInfo.propTypes = {
     name: PropTypes.string.isRequired,
     native: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
+    currency: PropTypes.string,
     languages: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
       code: PropTypes.string.isRequired,
