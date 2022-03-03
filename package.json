@@ -23,7 +23,7 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "reactstrap": "^8.9.0",
+    "reactstrap": "^9.0.1",
     "waait": "^1.0.5"
   },
   "scripts": {
